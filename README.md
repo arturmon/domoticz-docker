@@ -1,5 +1,7 @@
 # domoticz-docker
-arturmon/domoticz-docker Tags: **latest** and **dev**
+
+arturmon/domoticz-docker Tags: **latest** and **dev** 
+
 на фото нет установки времени, устанавливается путем добавления **Environment variables=Europe/Moscow**
 
 ```
