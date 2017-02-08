@@ -1,5 +1,5 @@
 # domoticz-docker
-arturmon/domoticz-docker Tags: latest and dev
+arturmon/domoticz-docker Tags: **latest** and **dev**
 ```
 docker create \
   --name=domoticz \
