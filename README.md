@@ -11,3 +11,4 @@ docker create \
   -p 8080:8080 \
   arturmon/domoticz-docker
   ```
+![Иллюстрация к проекту](https://github.com/arturmon/domoticz-docker/blob/master/Безымянный.jpg)
