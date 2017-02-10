@@ -2,7 +2,7 @@
 
 arturmon/domoticz-docker Tags: **latest** and **dev** 
 
-на фото нет установки времени, устанавливается путем добавления **Environment variables=Europe/Moscow**
+на фото нет установки времени, устанавливается путем добавления **Environment variables TZ=Europe/Moscow**
 
 ```
 docker create \
@@ -10,7 +10,7 @@ docker create \
   --net=bridge \
   -v <path to data>:/config \
   -e TZ=<timezone> \
-  -p 1443:1443 \
+  -p 443:1443 \
   -p 6144:6144 \
   -p 8080:8080 \
   -p 9898:9898 \
