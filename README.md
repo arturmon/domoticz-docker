@@ -13,6 +13,7 @@ docker create \
   -p 1443:1443 \
   -p 6144:6144 \
   -p 8080:8080 \
+  -p 9898:9898 \
   arturmon/domoticz-docker
   ```
 ![Иллюстрация к проекту](https://github.com/arturmon/domoticz-docker/blob/master/Безымянный.jpg)
