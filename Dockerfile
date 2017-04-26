@@ -40,3 +40,26 @@ org.freenas.settings="[ \
 \"optional\": true \
 } \
 ]"
+
+
+## packages dependencies
+RUN apt-get update \
+	&& apt-get install -y \
+	wget \
+	libssl-dev libcurl4-openssl-dev libusb-dev \
+	&& rm -rf /var/lib/apt/lists/*
+
+## Domoticz installation
+RUN mkdir -p /opt/domoticz \
+	&& wget -qO- http://releases.domoticz.com/releases/beta/domoticz_linux_x86_64.tgz | tar xz -C /opt/domoticz
+
+WORKDIR /opt/domoticz
+
+RUN mkdir -p /opt/domoticz/backup  /scripts
+VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups", "/config"]
+
+EXPOSE 8080 443 6144 9898
+
+
+ENTRYPOINT ["/opt/domoticz/domoticz", "-dbase", "/config/domoticz.db", "-log", "/config/domoticz.log"]
+CMD ["-www", "8080"]
