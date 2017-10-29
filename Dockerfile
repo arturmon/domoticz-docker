@@ -20,7 +20,7 @@ org.label-schema.build-date=$BUILD_DATE
 RUN apt-get update \
 	&& apt-get install -y \
 	wget \
-	libssl-dev libcurl4-openssl-dev libusb-dev \
+	libssl-dev libcurl4-openssl-dev libusb-dev python3-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## Domoticz installation
