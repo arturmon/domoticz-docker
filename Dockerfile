@@ -19,7 +19,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 RUN apt-get update \
 	&& apt-get install -y \
 	wget \
-	libboost-thread1.55-dev libssl-dev libcurl4-openssl-dev libusb-dev \
+	libboost-thread1.55-dev libssl-dev libcurl4-openssl-dev libusb-dev python3-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## Domoticz installation
