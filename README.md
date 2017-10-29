@@ -1,6 +1,7 @@
 # domoticz-docker
 
 arturmon/domoticz-docker Tags: **latest** and **dev** 
+add **/etc/localtime:ro**
 
 ### Dockerimage
 [![](https://images.microbadger.com/badges/image/arturmon/domoticz-docker.svg)](https://microbadger.com/images/arturmon/domoticz-docker "Get your own image badge on microbadger.com")
