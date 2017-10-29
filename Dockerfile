@@ -29,7 +29,7 @@ RUN mkdir -p /opt/domoticz \
 WORKDIR /opt/domoticz
 
 RUN mkdir -p /opt/domoticz/backup  /scripts
-VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups",  "/config", "/etc/localtime:/etc/localtime:ro"]
+VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups",  "/config", "/etc/localtime"]
 
 EXPOSE 8080 443 6144 9898
 
