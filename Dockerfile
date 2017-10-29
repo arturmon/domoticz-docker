@@ -13,7 +13,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 	org.label-schema.license="GPLv3" \
 	org.label-schema.build-date=$BUILD_DATE
 
-ENV TZ=Europe/Moscow
+
 
 ## packages dependencies
 RUN apt-get update \
@@ -29,7 +29,7 @@ RUN mkdir -p /opt/domoticz \
 WORKDIR /opt/domoticz
 
 RUN mkdir -p /opt/domoticz/backup  /scripts
-VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups",  "/config"]
+VOLUME ["/opt/domoticz/scripts", "/opt/domoticz/backups",  "/config", "/etc/localtime:/etc/localtime:ro"]
 
 EXPOSE 8080 443 6144 9898
 
