@@ -25,3 +25,16 @@ docker create \
   arturmon/domoticz-docker:dev
   ```
 ![Иллюстрация к проекту](https://github.com/arturmon/domoticz-docker/blob/master/Безымянный.jpg)
+
+### Запуск контейнера на Synology
+так как оболочка synology не дает сделать ссылку /etc/localtime приходиться запускать контейнер ручками, плюс тут используется шлюз от xiaomi поэтому используется сип сети host, получается вот такая строка запуска:
+```
+docker run -d --name=domoticz \
+--net=host \
+-v /volume1/homes/.../scripts:/opt/domoticz/scripts \
+-v /volume1/homes/.../conf:/config \
+-v /volume1/homes/.../backup:/opt/domoticz/backups \
+-v /etc/localtime:/etc/localtime:ro \
+arturmon/domoticz-docker:dev
+```
+... тут указываем путь где лежат у вас конфиги от Домотикса
